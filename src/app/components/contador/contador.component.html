@@ -1,0 +1,11 @@
+<div class="Contador">
+
+
+<h1 [class]="color">Contador</h1>
+<p>{{ numero }}</p>
+<p>{{ getName() }}</p>
+
+</div>
+<hr>
+<input type="text" placeholder="introduce un texto" (input)="cargarTexto($event)">
+<p>{{texto}}</p>
