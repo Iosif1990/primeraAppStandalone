@@ -1,32 +1,29 @@
 <section>
-    <h1>Formulario de Noticias</h1>
-    <!-- Formulario para agregar noticias -->
-    <form (ngSubmit)="guardar()">
+  <h1>Formulario de Noticias</h1>
+  <div>
+    <div>
       <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo" [(ngModel)]="newNoticias.titulo" required><br><br>
-  
-      <label for="imagen">URL de la imagen:</label>
-      <input type="text" id="imagen" name="imagen" [(ngModel)]="newNoticias.imagen" required><br><br>
-  
-      <label for="texto">Texto:</label>
-      <textarea id="texto" name="texto" [(ngModel)]="newNoticias.texto" required></textarea><br><br>
-  
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" name="fecha" [(ngModel)]="newNoticias.fecha" required><br><br>
-  
-      <button type="submit">Guardar</button>
-    </form>
-  
-    <hr>
-  
-    <!-- Lista de noticias -->
-    <h2>Lista de Noticias</h2>
-    <div *ngFor="let noticia of arrNoticias">
-      <h3>{{ noticia.titulo }}</h3>
-      <img [src]="noticia.imagen" alt="{{ noticia.titulo }}">
-      <p>{{ noticia.texto }}</p>
-      <p>Fecha de publicación: {{ noticia.fecha }}</p>
-      <hr>
+      <input type="text" id="titulo" placeholder="introduce titulo" [(ngModel)]="newNoticia.titulo">
     </div>
-  </section>
+    <div>
+      <label for="imagen">URL de la imagen:</label>
+      <input type="text" id="imagen" placeholder="url imagen" [(ngModel)]="newNoticia.imagen">
+    </div>
+    <div>
+      <label for="texto">Texto:</label>
+      <input id="texto" placeholder="introducir texto" [(ngModel)]="newNoticia.texto">
+    </div>
+    <div>
+      <label for="fecha">Fecha de publicación:</label>
+      <input type="date" id="fecha" name="fecha" [(ngModel)]="newNoticia.fecha">
+    </div>
+    <button (click)="guardar()">Guardar</button>
+  </div>
+  
+<div>
+  <hr>
+  <h2></h2>
+</div>
+
+</section>
   
