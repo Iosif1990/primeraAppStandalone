@@ -1,6 +1,6 @@
 <section>
   <h1>Formulario de Noticias</h1>
-  <div>
+  <div class="formulario">
     <div>
       <label for="titulo">Título:</label>
       <input type="text" id="titulo" placeholder="introduce titulo" [(ngModel)]="newNoticia.titulo">
@@ -20,9 +20,11 @@
     <button (click)="guardar()">Guardar</button>
   </div>
   
-<div>
   <hr>
-  <h2></h2>
+
+<div [innerHTML]="cargarDatos()">
+ 
+ 
 </div>
 
 </section>

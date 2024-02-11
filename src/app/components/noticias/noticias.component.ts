@@ -26,5 +26,12 @@ guardar(){
     'texto':"",
     'fecha':"",
 }
+
+}
+cargarDatos() : string {
+    let html = "";
+    this.arrNoticias.forEach(element => {html += `<p>${element.titulo} - ${element.imagen} - ${element.texto} - ${element.fecha}</p>`      
+    }); 
+    return html 
 }
 }
