@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./noticias.component.css'],
 })
 export class NoticiasComponent {
+  color: string = 'rojo'
+  
   arrNoticias: any[] = [];
   
   newNoticia: any = {

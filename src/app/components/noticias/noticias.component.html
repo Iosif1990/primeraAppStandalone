@@ -17,12 +17,12 @@
       <label for="fecha">Fecha de publicación:</label>
       <input type="date" id="fecha" name="fecha" [(ngModel)]="newNoticia.fecha">
     </div>
-    <button (click)="guardar()">Guardar</button>
+    <button class="{{ color }}" (click)="guardar()">Guardar</button>
   </div>
   
   <hr>
 
-<div [innerHTML]="cargarDatos()">
+<div class="respuestas" [innerHTML]="cargarDatos()">
  
  
 </div>
