@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./noticias.component.css'],
 })
 export class NoticiasComponent {
-  color: string = 'rojo'
+  color: string = 'violeta'
   
   arrNoticias: any[] = [];
   
@@ -19,6 +19,7 @@ export class NoticiasComponent {
   'texto':"",
   'fecha':"",
 }
+
 guardar(){
   this.arrNoticias.push(this.newNoticia);
   console.log(this.arrNoticias)
@@ -27,9 +28,9 @@ guardar(){
     'imagen':"",
     'texto':"",
     'fecha':"",
+  }
 }
 
-}
 cargarDatos() : string {
     let html = "";
     this.arrNoticias.forEach(element => {html += `<p>${element.titulo} - ${element.imagen} - ${element.texto} - ${element.fecha}</p>`      
